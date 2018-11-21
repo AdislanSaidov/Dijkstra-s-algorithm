@@ -131,7 +131,7 @@ const dijkstraPath = (graph, startNode, endNode) => {
 
 //run
 //array like adjacency list
-//each 3rd item of array is weight of edge
+//each 3rd item of array is a weight of edge
 let graph = Graph.create(
     [
         0, 1, 7,
