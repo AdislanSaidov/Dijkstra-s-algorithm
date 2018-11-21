@@ -55,11 +55,11 @@ class Edge {
 
 class Graph {
 
-    constructor(size) {
-        this.size = size;
+    constructor(count) {
+        this.count = count;
         this.nodes = [];
         this.edges = [];
-        for (let i = 0; i < size; ++i) {
+        for (let i = 0; i < count; ++i) {
             this.nodes.push(new Node(i));
         }
     }
@@ -68,8 +68,8 @@ class Graph {
         return this.nodes[index];
     }
 
-    addNode(v1, v2, w) {
-        let e = this.nodes[v1].connect(this.nodes[v2], w);
+    addNode(v1, v2, weight) {
+        let e = this.nodes[v1].connect(this.nodes[v2], weight);
         this.edges.push(e);
     }
 
@@ -132,7 +132,9 @@ const dijkstraPath = (graph, startNode, endNode) => {
     graph.nodes.forEach(n => console.log(`node: ${n.name}, weight: ${n.weight}`));
 };
 
-
+//run
+//array like adjacency list
+//each 3rd item of array is weight of edge
 let graph = Graph.create(
     [
         0, 1, 7,
