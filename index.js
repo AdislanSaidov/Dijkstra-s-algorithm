@@ -1,8 +1,5 @@
 /*
- * Implementation Dijkstra's algorithm
- *
- * Copyright (C) 
- * Author: Eddie Saidov
+ * My own implementation Dijkstra's algorithm
  */
 
 const log = (c) => {
