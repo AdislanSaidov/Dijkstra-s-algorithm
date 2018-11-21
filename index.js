@@ -1,4 +1,3 @@
-
 /*
  * Implementation Dijkstra's algorithm
  *
@@ -37,7 +36,7 @@ class Node {
 }
 
 class Edge {
-    
+
     constructor(v1, v2, weight) {
         this.v1 = v1;
         this.v2 = v2;
@@ -103,7 +102,7 @@ const dijkstraPath = (graph, startNode, endNode) => {
         log(`iteration: ${iter}`);
 
         currentNode = getMinWeightNode(Array.from(unvisiteds));
-        
+
         for (let e of currentNode.incidentEdges) {
             let nextNode = e.incidentNode(currentNode);
 
@@ -145,7 +144,7 @@ let graph = Graph.create(
         2, 5, 2,
         3, 4, 6,
         4, 5, 9
-    ], 6 
+    ], 6
 );
 const start = 0;
 const end = 4;
